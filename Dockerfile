@@ -31,4 +31,6 @@ COPY ./config/* config/
 
 RUN chmod a+x ${KAFKA_HOME}/scripts/*.sh
 
-CMD [""]
+WORKDIR ${KAFKA_HOME}/scripts
+
+CMD ["echo 'Starting kafka' &&"]
