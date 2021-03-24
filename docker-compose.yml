@@ -14,5 +14,9 @@ services:
             KAFKA_ADVERTISED_HOST_NAME: localhost
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
             KAFKA_CREATE_TOPICS: "users:1:1,users-stream:1:1:compact"
+            KAFKA_ADVERTISED_LISTENERS: INSIDE://:9092,OUTSIDE://ip172-18-0-29-c1dk6kpbqvp000e3a0a0-9092.direct.labs.play-with-docker.com:9092
+            KAFKA_LISTENERS: INSIDE://:9092,OUTSIDE://:9092
+            KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+            KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
 
     
